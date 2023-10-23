@@ -1,0 +1,393 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Inter:wght@400;900&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #fffdfa;
+    font-family: 'Inter', sans-serif;
+    padding: 0 3.5rem 0 5rem;
+    width: 98vw;
+    overflow-x: hidden;
+}
+
+.nav {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.nav h1 {
+    font-family: 'DM Serif Display', serif;
+    font-size: 5rem;
+}
+
+.nav ul li {
+    display: inline-block;
+    list-style-type: none;
+    padding: .5rem;
+}
+
+.nav a {
+    color: #5d5f79;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+.nav a::after {
+    content: "";
+    height: 2px;
+    width: 0%;
+    background-color: hsl(5, 85%, 63%);
+    display: block;
+    transition: .5s ease-in-out;
+}
+
+.nav a:hover::after {
+    content: "";
+    height: 2px;
+    width: 100%;
+    background-color: hsl(5, 85%, 63%);
+    display: block;
+}
+
+.flex-container-top {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 100vh;
+}
+
+.left {
+    width: 65%;
+    height: 100%;
+}
+
+.left .img-bg {
+    background-image: url(images/image-web-3-desktop.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 110%;
+    height: 60%;
+}
+
+.texts {
+    display: flex;
+    height: 40%;
+    width: 95%;
+    margin-top: 2rem;
+}
+
+.texts h1 {
+    font-size: 40px;
+    font-weight: bolder;
+}
+
+.texts .paragragh {
+    line-height: 1.5rem;
+    margin-left: 3rem;
+}
+
+.texts button {
+    margin-top: 18px;
+    padding: .8rem 2.7rem;
+    border: none;
+    border-radius: .2rem;
+    background: #f15e50;
+    color: #fffdfa;
+    letter-spacing: 4px;
+    transition: transform .5s ease;
+}
+
+.texts button:hover {
+    transform: scale(0.97);
+}
+
+.right {
+    background-color: #00001a;
+    height: 90%;
+    width: 25%;
+    color: #fffdfa;
+    padding: 1.4rem;
+    margin-left: 3rem;
+}
+
+.right h2 {
+    color: #e9ab53;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 10px 0;
+}
+
+.right h3 {
+    font-size: 16px;
+    margin: 10px 0;
+}
+
+.right p {
+    font-size: 14px;
+    color: #5d5f79;
+    margin: 16px 0;
+    line-height: 22px;
+}
+
+.context {
+    border-bottom: #5d5f79 1px solid;
+}
+
+.right .context:last-child {
+    margin-bottom: 3rem;
+    border: none;
+}
+
+.flex-container-bottom {
+    width: 100%;
+    height: 45vh;
+    display: flex;
+    justify-content: center;
+    padding: 2rem;
+}
+
+.figcaption {
+    display: flex;
+    justify-content: center;
+}
+
+.figcaption-img {
+    width: 120px;
+    height: 180px;
+    overflow: hidden;
+}
+
+.figcaption-img img {
+    width: 120px;
+    height: 180px;
+    transition: transform .5s ease-in-out;
+}
+
+.figcaption-img:hover img {
+    transform: scale(1.15);
+}
+
+.figcaption-texts {
+    margin: 2rem 1.5rem;
+    width: 12rem;
+}
+
+.figcaption-texts h2, p {
+    color: #5d5f79;
+}
+
+.figcaption-texts h3 {
+    font-size: 16px;
+    margin: 1rem 0;
+}
+
+.figcaption-texts p {
+    font-size: 14px;
+}
+
+/** TABLET RESPONSIVENES **/
+
+@media(max-width: 1115px) {
+    .texts h1 {
+        font-size: 35px;
+    }
+    .paragragh {
+        margin: 0;
+        width: fit-content;
+    }
+    .flex-container-bottom {
+        width: 65vw;
+        margin-left: 7.2rem;
+    }
+}
+
+@media(max-width: 885px) {
+    body {
+        padding: 2rem;
+    }
+    .flex-container-top {
+        height: 60vh;
+    }
+    .right {
+        height: 100%;
+    }
+    .texts {
+        width: 65vw;
+    }
+    .paragragh {
+        width: 30rem;
+        margin: 0;
+        padding: 0;
+    }
+    .flex-container-bottom {
+        width: 600px;
+    }
+    .figcaption-texts {
+        margin: 1rem .5rem;
+        width: 10rem;
+    }
+
+    .flex-container-bottom {
+        width: 30rem;
+        height: 20vh;
+        padding-left: 14.5%;
+}
+
+    .figcaption {
+        width: 16rem;
+    }
+}
+
+@media(max-width: 770px) {
+    .right {
+        height: 110%;
+    }
+    .flex-container-bottom {
+        width: 30rem;
+        height: 20vh;
+        padding-top: 5rem;
+        padding-left: 5%;
+    }
+
+    .figcaption {
+        width: 15rem;
+    }
+}
+
+/** MOBILE RESPONSIVENESS **/
+
+@media(max-width: 430px) {
+    .nav {
+        position: relative;
+    }
+
+    .icon {
+        background-color: #fffdfa;
+        border: 0;
+        cursor: pointer;
+        padding: 0;
+        position: relative;
+        height: 50px;
+        width: 50px;
+        z-index: 100;
+    }
+    
+    .icon:focus {
+        outline: 0;
+    }
+    
+    .icon .line {
+        background-color: #00001a;
+        height: 2px;
+        width: 40px;
+        position: absolute;
+        top: 20px;
+        left: 4px;
+        transition: transform .5s linear;
+    }
+    
+    .icon .line2 {
+        top: auto;
+        bottom: 20px;
+    }
+    
+    nav.active .icon .line1 {
+        transform: rotate(-45deg) translateY(5.5px);
+    }
+    
+    nav.active .icon .line2 {
+        transform: rotate(45deg) translateY(-5.5px);
+    }
+
+    .nav ul{
+        background-color: #fffdfa;
+        width: 70vw;
+        height: 110vh;
+        position: absolute;
+        padding-top: 60%;
+        top: -5rem;
+        right: -5rem;
+        z-index: 1;
+        transform: translateX(100%);
+        transition: transform .5s linear;
+    }
+
+    nav.active ul{
+        width: 100%;
+        transform: translateX(0);
+    }
+
+    .nav ul li {
+        display: flex;
+        padding-left: 20%;
+        padding-bottom: 40px;
+        transition: opacity .5s linear;
+    }
+
+    .nav.active ul li {
+        opacity: 1;
+    }
+
+    
+    section {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .flex-container-top .img-bg {
+        width: 80vw;
+        height: 40vh;
+    }
+
+    .flex-container-top .texts {
+        display: flex;
+        flex-direction: column;
+        width: 100vw;
+        margin: 0;
+        padding: 30px 0;
+    }
+
+    .texts h1 {
+        width: 80%;
+    }
+
+    .paragragh {
+        padding-top: 30px;
+        width: 80%;
+        padding-left: -6rem;
+        padding-right: 3rem;
+    }
+
+    .right {
+        margin-top: 90%;
+        margin-left: 0;
+        width: 80vw;
+    }
+
+    .flex-container-bottom {
+        width: 85vw;
+        margin-top: 127vh;
+        margin-left: 0;
+        margin-bottom: 8rem;
+    }
+
+    .figcaption-img {
+        width: 250px;
+        height: 200px;
+    }
+
+    .figcaption-img:hover img {
+        transform: scale(.95);
+    }
+
+    .figcaption-texts {
+        width: 300px;
+    }
+}
